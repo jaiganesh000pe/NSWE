@@ -236,7 +236,7 @@ def delete_record(id):
     except:
         con.rollback()
         msg = "error in insert operation"
-      
+          
     finally:
         return render_template('index.html',msg=msg )
         con.close
@@ -245,4 +245,4 @@ def delete_record(id):
 
 
 if __name__ == '__mani__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
